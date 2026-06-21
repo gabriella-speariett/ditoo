@@ -1,0 +1,18 @@
+[Unit]
+Description=Ditoo Weather Display Daemon
+After=bluetooth.target network-online.target
+Wants=bluetooth.target network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/ditoo
+ExecStart=/home/pi/ditoo/.venv/bin/python daemon.py
+Restart=on-failure
+RestartSec=30s
+Environment=LOG_LEVEL=INFO
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
