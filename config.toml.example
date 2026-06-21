@@ -1,0 +1,40 @@
+# Ditoo Weather Display Daemon Configuration
+
+# Bluetooth MAC address of your Divoom Ditoo device
+mac = "AA:BB:CC:DD:EE:FF"
+
+# Your location (used for weather and sunrise/sunset calculation)
+latitude = 0
+longitude = 0
+timezone = "Europe/London"
+
+# How often to fetch weather (in seconds, default 1800 = 30 minutes)
+weather_poll_interval = 1800
+    
+# How often to check if the display needs updating (in seconds, default 60 = 1 minute)
+display_check_interval = 60
+
+# How often to showcase weather (in seconds, default 900 = 15 minutes)
+weather_showcase_interval = 900
+
+# How long to display weather showcase (in seconds, default 120 = 2 minutes)
+weather_showcase_duration = 120
+
+# Path to notification sound (plays when weather showcase starts)
+notification_sound_path = "assets/sounds/alert.wav"
+
+# Sleep/hibernation window (24-hour format, default 23:00 - 06:00)
+sleep_start_hour = 23
+sleep_end_hour = 6
+
+# Sunrise/sunset window: display horizon GIF if within N seconds of sunrise/sunset
+horizon_window = 2700
+
+# Temperature thresholds for GIF selection (in Celsius)
+hot_threshold_c = 25.0
+very_hot_threshold_c = 35.0
+cold_threshold_c = 5.0
+freezing_threshold_c = -5.0
+
+# Path to assets folder (default: ../assets relative to this file)
+# assets_root = "assets"
